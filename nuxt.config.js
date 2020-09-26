@@ -39,12 +39,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxt/content',
-    '@nuxtjs/google-analytics'
   ],
-
-googleAnalytics: {
-  id: process.env.GA_ID
-},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
