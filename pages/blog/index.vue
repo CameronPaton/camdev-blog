@@ -68,7 +68,7 @@ export default {
                 .fetch()
 
             return {
-                articles,
+                articles
             }
         },
         methods: {
@@ -114,78 +114,3 @@ export default {
 
     
 </style>
-
-<!--
-<ul class="mx-5 text-black grid grid-cols-6">
-<li v-for="(post, index) in posts" :key="index" data-aos="fade-up" data-aos-delay="500">
-<nuxt-link :to="{ path: post.slug }" class="md:grid md:grid-cols-4">
-    <img :src="post.feature_image" class="md:w-full md:h-48 lg:h-56 xl:h-64 md:col-span-1 md:col-start-1 md:col-end-2 rounded-lg">
-        <div class="content md:col-span-3 md:col-start-2 md:col-end-5 md:ml-5 p-5">
-            <h3 class="text-center md:text-left"> {{ post.title }} </h3>
-            <p class="pt-8"> {{ post.excerpt }} </p>
-            <p class="text-gray-500 pt-8">{{ $moment(post.published_at).format("MMMM Do YYYY") }} </p>
-        </div>
-</nuxt-link>
-</ul>
-
-v2:<template>
-    
-     <ul class="mx-5 text-black grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:grid-cols-3 lg:gap-5 grid-flow-row xl:grid-cols-4">
-                <li v-for="(post, index) in posts" :key="index" class="shadow-lg">
-                    <nuxt-link :to="{ path: post.slug }">
-                        <div class="flex flex-col justify-evenly">
-                            <img :src="post.feature_image" class="md:w-full md:h-48 lg:h-56 xl:h-64 rounded-lg">
-                            <div class="content">
-                                <h3 class="text-center"> {{ post.title }} </h3>
-                                <p class=""> {{ post.excerpt }} </p>
-                            </div>
-                            <p class="publishedDate bg-red-500">{{ $moment(post.published_at).format("MMMM Do YYYY") }} </p>
-                        </div>
-                        
-                    </nuxt-link>
-                </li>
-            </ul>
-</template>
-
-css:<template>
-    #allArticles ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    #allArticles ul li {
-        background: white;
-        border-radius: 1em;
-        
-        box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.04);
-    }
-
-    .content {
-        padding: .5em;
-    }
-
-    li h3 {
-        font-size: 1.5em;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        display: block;
-        margin: -.1em 0 .2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        display: block;
-    }
-
-    @media only screen and (min-width: 768px){
-        #allArticles li {
-            grid-template-columns: 180px auto;
-        }
-    }
-
-</template>
--->

@@ -12,7 +12,7 @@
                     <br>
                     <p>I'm a self-taught Web Designer and Developer. Love all things internet and technology, as well as health and fitness and I don't mind the odd travel event, so this blog won't just be about the digital world but a bit of all round lifestyle in there too. </p>
                     <br>
-                    <p>Camdev is my username across social media in the context of Digital Development and under that username I aim to provide future content or services that may be useful for individuals or small to medium-sized businesses aiming to promote themselves or their company online, so stay in touch. </p>
+                    <p>The content in this site will be quite broad ranging, but I also have a portfolio site which will focus mainly on Web Development in terms of skills and projects. There will be a link to that added here in the near future, which will be my own personal site. This though will be where I will be adding future content that may be useful for individuals or small to medium-sized businesses aiming to promote themselves or their company online, so stay in touch.</p>
                 </div>
             </div></div>
             

@@ -10,7 +10,7 @@
             <!--Back to All Articles -->
             <div class="w-full flex justify-evenly md:justify-between items-center">
                 <nuxt-link to="/blog"><button class="ml-6 md:ml-10 hidden md:block bg-black border border-white hover:bg-white hover:text-gray-700 text-white p-2 md:p-3 w-40 transition ease-in-out duration-500 focus:outline-none md:flex md:flex-row md:items-center" > <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg> All Articles </button></nuxt-link>
-                <span class="text-gray-500 text-lg"> {{ this.formatDate(article.createdAt) }} </span>
+                <span class="text-gray-500 text-lg"> {{ formatDate(article.createdAt) }} </span>
                 <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold mr-10"> {{ article.tags }} </span>
             </div>
             <!-- Tags or Category of article -->
@@ -90,10 +90,25 @@
 </template>
 
 <script>
-import global from '~/mixins/global.js';
 import appSidebar from "../../components/appSidebar";
 
     export default {
+        head() {
+        return {
+            title: this.article.title,
+            meta: [
+                    {
+                        hid: this.article.description,
+                        name: 'description',
+                        content: 'Blog'
+                    },
+					{
+						name: 'keywords', 
+						content: this.article.keywords
+					}
+                ]
+            }
+        },
         async asyncData({ $content, params }) {
             const article = await $content('articles', params.slug).fetch()
 
@@ -112,7 +127,12 @@ import appSidebar from "../../components/appSidebar";
         components: {
             'app-sidebar': appSidebar
         },
-        mixins: [global]
+        methods: {
+        formatDate(date) {
+            const options = { day: 'numeric', month: 'short', year: 'numeric' }
+            return new Date(date).toLocaleDateString('en-GB', options)
+            }
+        }
     }
 </script>
 

@@ -24,10 +24,10 @@
             <div><h2 class="text-center mt-8">Camdev Digital Development</h2></div>
             <div >
               <p class="text-center mt-8 text-sm md:text-md lg:text-lg px-8 md:px-20 text-gray-700">
-                Thankyou for visiting my site! My username across social media is Camdev but my name is Cameron and I created this site as a hub for online content that I intend to develop. Digital Development is the general theme of the content, which will cover a broad spectrum of categories in the digital world such as: web development and design; useful software; devices and digital marketing. My aim is to make your digital life or business more efficient. 
+                Thankyou for visiting my blog site! The username I use for blogging and vlogging is Camdev but my name is Cameron and I created this site as a hub for online content that I intend to develop. Digital Development is the general theme of the content, which will cover a broad spectrum of categories in the digital world such as: web development and design; useful software; devices; digital media and digital marketing. My aim is to create a central resource hub for information containing both articles and videos. 
               </p>
               <p class="text-center mt-8 text-sm md:text-md lg:text-lg px-8 py-5 md:px-20 text-gray-700">
-                In the future I plan to create regular blog articles, online courses, free useful content, ebooks, videos and freelancing services. I also have a Youtube channel which I will use to supplement any tutorials I make so please subscibe to that. Enter your email address below to subscribe to this site and you will receive updates on new content, services or latest news. 
+                In the future I plan to create regular blog articles, online courses, free useful content, ebooks, videos and freelancing services which will be available through this website. I also have a Youtube channel which I will use to supplement any tutorials I make so please subscribe to that. Enter your email address below to subscribe to this site and you will receive updates on new content, services or latest news. 
               </p>
             </div>
         </section>
