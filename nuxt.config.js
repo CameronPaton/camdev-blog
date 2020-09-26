@@ -39,7 +39,11 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics', {
+      id: process.env.GA_ID,
+      dev: false
+    }
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
