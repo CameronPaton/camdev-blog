@@ -6,6 +6,14 @@ alt: my first blog post
 tags: development
 ---
 
-# My first blog post
+## My first blog post
 
 Welcome to my first blog post using content module
+
+## Test Code
+
+```js[second_blog_post]
+const newTest = function() {
+	console.log('test');
+}
+```

@@ -189,6 +189,10 @@ h2:after {
     padding-top: 20px;
 }
 
+#row5 span{
+    font-size: 1.2em;
+}
+
 #row5 span:after {
   content: '';
   display: block;
@@ -224,7 +228,7 @@ h2:after {
       font-size: 2em;
     }
  #row5 span {
-     font-size: 0.8em;
+     font-size: 0.9em;
  }
 }
 
