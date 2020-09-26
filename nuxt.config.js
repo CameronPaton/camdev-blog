@@ -39,7 +39,6 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxt/content',
-    '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics'
   ],
 
@@ -49,10 +48,6 @@ googleAnalytics: {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  },
-
-  sitemap: {
-    hostname: process.env.SITEMAP_URL,
   },
 
   content: {
