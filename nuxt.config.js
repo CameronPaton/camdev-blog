@@ -40,11 +40,12 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics', {
-      id: process.env.GA_ID,
-      dev: false
-    }
+    '@nuxtjs/google-analytics'
   ],
+
+googleAnalytics: {
+  id: process.env.GA_ID
+},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
