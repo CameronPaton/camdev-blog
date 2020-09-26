@@ -50,6 +50,11 @@ googleAnalytics: {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
+
+  sitemap: {
+    hostname: process.env.SITEMAP_URL,
+  },
+
   content: {
     markdown: {
       prism: {
