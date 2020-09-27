@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import appSearch from '../components/appSearch';
+import appSearch from '../components/appsearch';
 
     export default {
         name: 'AppHeader',

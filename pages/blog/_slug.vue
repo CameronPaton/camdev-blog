@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import appSidebar from "../../components/appSidebar";
+import appSidebar from "../../components/appsidebar";
 
     export default {
         head() {

@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import appSocialMedia from "../components/socialMedia";
-import appSubscribe from "../components/appSubscribe";
+import appSocialMedia from "../components/socialmedia";
+import appSubscribe from "../components/appsubscribe";
 
     export default {
             name: 'appSidebar',
