@@ -53,8 +53,4 @@ import appCategories from "../components/appCategories";
     
 </script>
 
-<style scoped>
-
-</style>
-
 <!-- Subscribe to Youtube Channel (add later) -->
