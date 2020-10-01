@@ -1,27 +1,31 @@
 <template>
-    
+    <div class="">
+    <Appheader />
     <div class="mt-56 lg:mt-24 h-auto w-screen">
         <header>
-            <div class="blogHeader grid grid-rows-2 grid-cols-3 gap-5 lg:flex lg:flex-row lg:justify-around">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/7.png">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/8.png">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/9.png">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/10.png">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/11.png">
-                <img class="w-24 md:w-32 mx-auto my-2 md:my-5 hover:shadow-lg" src="~/assets/images/categories/12.png">
+            <div id="row1" class="bg-white w-full flex items-center justify-center">
+                <h2 class="blogHeader text-bold text-center text-3xl md:text-5xl lg:text-6xl text-red-800 mx-5">Welcome to my Blog</h2>
+            </div>
+        </header>
+
+        <main class="">
+            <div class="relative bg-white">
+                <button @click="toggle" class="border border-black text-black p-3 uppercase focus:outline-none hover:bg-gray-300 flex flex-row items-center justify-center ml-20">Filter <svg class="w-6 h-6 p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <ul v-if="active" class="bg-gray-400 w-48 absolute z-10">
+                        
+                        <li v-for="tag of tags" :key="tag.slug" class="bg-white border-b border-gray-500 text-black p-5 block hover:bg-gray-400 text-center uppercase">
+                        <NuxtLink :to="`/blog/tag/${tag.slug}`">
+                        <span class="">
+                        {{ tag.name }}
+                        </span>
+                        </NuxtLink>
+                        </li>
+                        
+                    </ul>
             </div>
             
-            <div class="filterSort flex flex-row justify-around bg-red-800 text-white hidden">
-                <div>
-                    <button class="filterArticles bg-white text-black p-2 my-2 w-30">Most Recent</button>
-                </div>
-                <div class="sortArticles">
-                    <button class="bg-white text-black p-2 my-2 w-30">Oldest First</button>
-                </div>
-            </div>
-        </header>   
 
-        <main class="py-8">
+            <div class="my-8">
             <ul class="mx-5 text-black grid gap-5 grid-cols-1 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 grid-flow-row">
                 <li v-for="article of articles" :key="article.slug" class="shadow-md hover:shadow-lg">
                     <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -31,14 +35,17 @@
                         <p class="p-3">{{ article.description }}</p>
                     </div>
                     <div class="flex flex-row items-center justify-between m-3">
-                        <span class="text-gray-500 p-3"> {{ formatDate(article.createdAt) }} </span>
+                        <span class="text-gray-500 p-3 italic"> {{ formatDate(article.createdAt) }} </span>
                         <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold text-white"> {{ article.tags }} </span>
                     </div>
                     </NuxtLink>
                 </li>
             </ul>
+            </div>
         </main>
     </div>
+    <Appfooter />
+</div>
 </template>
 
 <script>
@@ -61,14 +68,22 @@ export default {
                 ]
             }
         },
+        data() {
+            return {
+                active: false
+            }
+        },
         async asyncData({ $content, params }) {
             const articles = await $content('articles', params.slug)
                 .only(['title', 'description', 'img', 'slug', 'createdAt', 'tags'])
                 .sortBy('createdAt', 'desc')
                 .fetch()
-
+            const tags = await $content('tags', params.slug)
+                .only(['name', 'slug'])
+                .fetch()
             return {
-                articles
+                articles,
+                tags
             }
         },
         methods: {
@@ -76,41 +91,18 @@ export default {
             const options = { day: 'numeric', month: 'short', year: 'numeric' }
             return new Date(date).toLocaleDateString('en-GB', options)
             },
+        toggle () {
+            this.active = !this.active
+        }
     }
 }
 </script>
 
 <style scoped>
+    #row1 {
+        height:250px;
+    }
     .blogHeader {
-        
-        background-color: #f8f4e1;
+        font-family: 'Rock Salt', cursive;
     }
-
-    .filterArticles:hover .dropdown-menu {
-        display: block;
-    }
-
-    main {
-        background-color: #ECECEC;
-    }
-
-    h2 {
-        font-size: 1.5em;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        display: block;
-    }
-
-    h2:after {
-        content: '';
-        display: block;
-        margin: 0 auto;
-        width: 5%;
-        padding-top: 20px;
-        border-bottom: 2px solid #8e0b0b;
-  
-    }
-
-    
 </style>

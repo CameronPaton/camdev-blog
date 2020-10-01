@@ -1,21 +1,28 @@
 <template>
-    <article class="mt-56 lg:mt-24 mb-8">
-
-
-        <section id="articleHeader" class="bg-black text-white flex flex-col items-center justify-around">
-            <h1 class="text-center"> {{ article.title }} </h1>
+<div>
+    <article>
+        <section id="articleHeader" class=" text-black flex flex-col items-center justify-around">
+            <h2 class="text-center font-secondary mx-20 my-5 text-3xl md:text-4xl lg:text-5xl"> {{ article.title }} </h2>
             <p class="mx-8 md:mx-20 lg:mx-32 text-md md:font-bold tracking-wider"> {{ article.description }} </p>
-            
+            <Appsearch />
             
             <!--Back to All Articles -->
-            <div class="w-full flex justify-evenly md:justify-between items-center">
-                <nuxt-link to="/blog"><button class="ml-6 md:ml-10 hidden md:block bg-black border border-white hover:bg-white hover:text-gray-700 text-white p-2 md:p-3 w-40 transition ease-in-out duration-500 focus:outline-none md:flex md:flex-row md:items-center" > <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg> All Articles </button></nuxt-link>
-                <span class="text-gray-500 text-lg"> {{ formatDate(article.createdAt) }} </span>
-                <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold mr-10"> {{ article.tags }} </span>
-            </div>
+            
             <!-- Tags or Category of article -->
         </section>
 
+        <div class="w-full bg-black flex justify-center">
+            <nuxt-link to="/"><img class="h-24 lg:h-32 mt-5" src="~/assets/images/12-2.png" alt=""></nuxt-link>
+        </div>
+
+
+        <div class="w-full flex justify-between items-center bg-black p-5">
+                <nuxt-link to="/blog"><button class="md:ml-10 bg-black border border-white hover:bg-white hover:text-gray-700 text-white p-2 md:p-3 md:w-40 transition ease-in-out duration-500 focus:outline-none md:flex md:flex-row md:items-center" > <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg><span class="hidden md:block"> All Articles</span> </button></nuxt-link>
+                <div>
+                    <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold mr-3"> {{ article.tags }} </span>
+                    <span v-if="article.featured === true " class="border border-gold py-1 px-3 rounded-full bg-gold font-bold text-black"> Featured Article </span>
+                </div>
+        </div>
 
 
         <div class="content h-auto md:grid md:grid-cols-4 md:gap-3 ">
@@ -49,13 +56,14 @@
 
 
                 <!-- POST CONTENT - END OF INTRO -->
-                
-                <nuxt-content class="coreContent mx-5 my-5 md:mx-8 md:my-8 p-2" :document="article" />
+                <div class="text-black text-lg mx-20 mt-8 italic"> Article published: {{ formatDate(article.createdAt) }} </div>
+                <nuxt-content class="coreContent mx-5 pl-2 md:px-8" :document="article" />
 
-                <span v-if="article.featured === true "> Featured Article </span>
+                
                 
                 <!-- Social Share Article -->
-                <div class="addthis_inline_share_toolbox text-center"></div>
+                
+            
                 
                 <!-- Next and Previous -->
                 <div>
@@ -64,17 +72,12 @@
                 <!-- Related Articles -->
 
                 <!-- Disqus Comments -->
+                <div class="comments mx-5 pl-2 md:pl-8">
+                    <Disqus shortname="camdev" />
+                </div>
+                
 
-                <div id="disqus_thread" class="mx-8"></div>
-                <script>
-                    (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://camdev.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                    })();   
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                
 
 
             </div>
@@ -83,14 +86,20 @@
             <app-sidebar></app-sidebar>
         </aside>
         </div>
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6f35b8f80ce631"></script>
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6f35b8f80ce631"></script>
-        <script id="dsq-count-scr" src="//camdev.disqus.com/count.js" async></script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+
 </article>
+<Appfooter />
+
+</div>
+
 </template>
 
 <script>
 import appSidebar from "../../components/appsidebar";
+import prevNext from "../../components/prevnext";
+import { Disqus } from 'vue-disqus';
 
     export default {
         head() {
@@ -106,7 +115,10 @@ import appSidebar from "../../components/appsidebar";
 						name: 'keywords', 
 						content: this.article.keywords
 					}
-                ]
+                ],
+            script: [
+                { type: 'text/javascript', src:'https://platform-api.sharethis.com/js/sharethis.js#property=5f74731cd6bec30019bb9fef&product=sop', async: 'async' }
+            ]
             }
         },
         async asyncData({ $content, params }) {
@@ -125,7 +137,8 @@ import appSidebar from "../../components/appsidebar";
             }
         },
         components: {
-            'app-sidebar': appSidebar
+            'app-sidebar': appSidebar,
+            'prev-next': prevNext,
         },
         methods: {
         formatDate(date) {

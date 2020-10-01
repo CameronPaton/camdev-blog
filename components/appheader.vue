@@ -17,9 +17,9 @@
 
         
 
-        <form class="p-0 w-56 md:w-64 h-10 lg:order-3 lg:mr-5 my-auto">
+        <div class="p-0 w-56 md:w-64 h-10 lg:order-3 lg:mr-5 my-auto">
             <app-search></app-search>
-        </form>
+        </div>
     </header>
 </template>
 
@@ -30,7 +30,8 @@ import appSearch from '../components/appsearch';
         name: 'AppHeader',
         components: {
             'app-search': appSearch
-        },
+        }
+            
     }
 
 </script>

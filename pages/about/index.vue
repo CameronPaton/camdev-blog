@@ -1,14 +1,16 @@
 <template>
+    <div>
+        <Appheader />
     <main class="mt-56 lg:mt-24 grid grid-cols-4 grid-rows-7 h-auto">
-        <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative flex items-start justify-start" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-            <img src="../../assets/images/23.png" class="z-10 absolute lg:h-32" data-aos="fade" data-aos-delay="800" data-aos-once="true">
+        <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative flex items-start justify-start">
+            <img src="../../assets/images/23.png" class="z-10 absolute lg:h-32">
         </div>
 
         <div id="row2" class="row-span-1 row-start-2 row-end-3 col-start-1 col-end-5 col-span-4 lg:grid lg:grid-cols-2 flex flex-col">
             <div class="col-span-1 col-start-1 col-end-2"><img class="w-full h-full" src="../../assets/images/berlin.jpg"></div>
             <div class="col-span-1 col-start-2 col-end-3 flex items-center"><div class="bg-white md:w-10/12 xl:w-9/12 aboutMe mb-8 mx-3 -mt-5 md:mx-auto md:my-8 md:-mt-10 lg:-ml-10 lg:mt-10 lg:mb-3 shadow-lg">
                 <div class="p-5 text-sm lg:text-base m-5">
-                    <span class="greeting lg:text-5xl text-4xl">Hi, I'm Cameron,</span>
+                    <span class="greeting lg:text-3xl text-xl">Hi, I'm Cameron,</span>
                     <br>
                     <p>I'm a self-taught Web Designer and Developer. Love all things internet and technology, as well as health and fitness and I don't mind the odd travel event, so this blog won't just be about the digital world but a bit of all round lifestyle in there too. </p>
                     <br>
@@ -28,7 +30,7 @@
             </div>
             <div class="col-span-1 col-start-2 col-end-3 bg-yellow-100 p-8">
                 <span class="text-base md:text-xl lg:text-2xl font-bold">What I'm doing now...</span>
-                <p class="mt-3">Right now I'm producing products such as this blog site and aiming to write out some articles. The categories include: <span class="font-bold text-green-500">Design</span>, covering website design techniques; <span class="font-bold text-purple-500">Technology</span> which could be either hardware or software based; <span class="font-bold text-blue-500">Development</span>, which is website development; <span class="font-bold text-yellow-600">Reviews</span>, which could be anything such as books or films; <span class="font-bold text-red-800">Health</span>, which covers all things fitness and nutrition and <span class="font-bold text-teal-400">Media</span>, which will be any digital media such as photography, videos, vlogging or blogging.</p>
+                <p class="mt-3">Right now I'm producing products such as this blog site and aiming to write out some articles. The categories include: <span class="font-bold text-green-500">Design</span>, covering website design techniques; <span class="font-bold text-purple-500">Technology</span> which could be either hardware or software based; <span class="font-bold text-blue-500">Development</span>, which is website development; <span class="font-bold text-yellow-600">Reviews</span>, which could be anything such as books or films; <span class="font-bold text-red-800">Health</span>, which covers all things fitness and nutrition, and <span class="font-bold text-teal-400">Media</span>, which will be any digital media such as photography, videos, vlogging or blogging.</p>
             </div>
             <div class="col-span-1 col-start-3 col-end-4 bg-blue-100 p-8">
                 <span class="text-base md:text-xl lg:text-2xl font-bold">What I'm doing in the future...</span>
@@ -75,8 +77,8 @@
         </div>
 
         <div id="row7" class="bg-gray-700 h-auto row-start-7 row-end-8 col-start-1 col-end-5 col-span-4">
-            <div class="text-base md:text-lg text-center p-8 text-white"> 
-                You can follow me on social media at the links below and enter your email address further down to get updates on any new articles or content.
+            <div class="smediaHeading text-base md:text-lg text-center p-8 text-white"> 
+                Follow me on social media:
             </div>
                 <div class="smediaIcons grid grid-cols-3 gap-8 grid-rows-2 p-5 m-8 md:flex md:flex-row md:items-center md:justify-between">
                     <a href="https://www.pinterest.co.uk/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="~/assets/images/pinterest.png" alt="pinterest"></a>
@@ -91,6 +93,7 @@
 
 
     </main>
+    </div>
 </template>
 
 <script>
@@ -103,11 +106,11 @@
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'About me'
+                        content: 'Cameron Paton | About me | Camdev | blog | Blog'
                     },
 					{
 						name: 'keywords', 
-						content: 'about me, who am I'
+						content: 'about me, about, who am I, Cameron, Paton, Cameron Paton, cameron paton, cameron, paton, camdev, Camdev, blog, website developer, website designer, digital developer, online content creator'
 					}
                 ]
             }
@@ -143,7 +146,7 @@
 }
 
 .greeting {
-    font-family: 'Mrs Saint Delafield', cursive;
+    font-family: 'Rock Salt', cursive;
     color: #8e0b0b;
     font-weight: bold;
 }
@@ -169,11 +172,11 @@ h2:after {
 
 #row4 {
     height: 500px;
-    background-image: url('../../assets/images/IMG_0267.jpeg');
+    background-image: url('../../assets/images/balticSea.jpeg');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center 15%;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 
@@ -207,16 +210,17 @@ h2:after {
     
 }
 
+.smediaHeading {
+    font-family: 'Rock Salt', cursive;
+}
+
 .smediaIcons {
     justify-items: center;
 }
 
 @media screen and (max-width: 1024px){
     #row1 img {
-    height: 60%;
-    }
-    #row4 {
-        background-attachment: scroll;
+        height: 60%;
     }
 }
 

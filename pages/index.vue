@@ -1,10 +1,11 @@
 <template>
-
+    <div>
+    <Appheader />
     <main class="mt-56 lg:mt-24 grid grid-cols-4 grid-rows-9 h-auto">
 
         <!--Showcase Section -->
 
-        <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative" data-aos="fade-up" data-aos-once="true">
+        <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative">
           <div id="overlay" class="h-screen bg-black flex flex-col items-center">
             <div id="heroBranding" class="h-screen flex flex-col items-center justify-center md:justify-evenly">
               <img class="w-64 md:w-6/12" id="showcaseBrand" src="~/assets/images/narrow.png" alt="camdev digital development">
@@ -20,13 +21,13 @@
 
         <!--About Section -->
 
-        <section id="row2" class="row-span-1 row-start-2 row-end-3 col-start-1 col-end-5 col-span-4" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+        <section id="row2" class="row-span-1 row-start-2 row-end-3 col-start-1 col-end-5 col-span-4">
             <div><h2 class="text-center mt-8">Camdev Digital Development</h2></div>
             <div >
-              <p class="text-center mt-8 text-sm md:text-md lg:text-lg px-8 md:px-20 text-gray-700">
+              <p class="mt-8 text-sm md:text-md lg:text-lg px-8 md:px-20 text-gray-700">
                 Thankyou for visiting my blog site! The username I use for blogging and vlogging is Camdev but my name is Cameron and I created this site as a hub for online content that I intend to develop. Digital Development is the general theme of the content, which will cover a broad spectrum of categories in the digital world such as: web development and design; useful software; devices; digital media and digital marketing. My aim is to create a central resource hub for information containing both articles and videos. 
               </p>
-              <p class="text-center mt-8 text-sm md:text-md lg:text-lg px-8 py-5 md:px-20 text-gray-700">
+              <p class="mt-8 text-sm md:text-md lg:text-lg px-8 py-5 md:px-20 text-gray-700">
                 In the future I plan to create regular blog articles, online courses, free useful content, ebooks, videos and freelancing services which will be available through this website. I also have a Youtube channel which I will use to supplement any tutorials I make so please subscribe to that. Enter your email address below to subscribe to this site and you will receive updates on new content, services or latest news. 
               </p>
             </div>
@@ -34,7 +35,7 @@
 
         <!--Branding and motto - ties in with parallax image somehow? -->
 
-        <div id="row3" class="bg-red-800 row-span-1 row-start-3 row-end-4 col-start-1 col-end-5 col-span-4 flex items-center justify-center" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+        <div id="row3" class="bg-red-800 row-span-1 row-start-3 row-end-4 col-start-1 col-end-5 col-span-4 flex items-center justify-center">
             <div id="row3-col-1" class="border-l-4 border-white pl-5 font-extrabold text-yellow-400 w-64"><h1>Make Your Digital Life More Efficient</h1></div>
         </div>
 
@@ -66,7 +67,7 @@
                         <p class="p-3">{{ featuredArticle.description }}</p>
                     </div>
                     <div class="flex flex-row items-center justify-between m-3">
-                        <span class="text-white p-3"> {{ formatDate(featuredArticle.createdAt) }} </span>
+                        <span class="text-white p-3 italic"> {{ formatDate(featuredArticle.createdAt) }} </span>
                         <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold text-white"> {{ featuredArticle.tags }} </span>
                     </div> 
                   </div>
@@ -75,7 +76,7 @@
               </ul>
             </div>
         </div>
-
+      
         <!--Recent Articles -->
 
         <div id="row9" class="bg-blue-200 row-start-9 row-end-10 col-start-1 col-end-5 col-span-4 h-auto mt-8">
@@ -91,7 +92,7 @@
                         <p class="p-3">{{ article.description }}</p>
                     </div>
                     <div class="flex flex-row items-center justify-between m-3">
-                        <span class="text-gray-500 p-3"> {{ formatDate(article.createdAt) }} </span>
+                        <span class="text-gray-500 p-3 italic"> {{ formatDate(article.createdAt) }} </span>
                         <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold text-white"> {{ article.tags }} </span>
                     </div>
                   </div>
@@ -99,11 +100,13 @@
               </li>
             </ul>
           </div>
-
+         
         </div>
     
 
   </main>
+   <Appfooter />
+</div>
 </template>
 
 <script>
@@ -160,7 +163,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 #row2 {
@@ -217,7 +220,7 @@ h2:after {
     background-position: center 10%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 #row8{
@@ -259,12 +262,6 @@ h2:after {
 
 #overlay {
   background: rgba(0,0,0,0.7)
-}
-
-@media screen and (max-width: 1024px){
-    #row4, #row1 {
-        background-attachment: scroll;
-    }
 }
 
 @media screen and (max-width: 768px){

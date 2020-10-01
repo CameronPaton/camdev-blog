@@ -14,7 +14,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"  },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"  },
-      { rel:"stylesheet", href: "https://fonts.googleapis.com/css2?family=Alex+Brush&family=Mrs+Saint+Delafield&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  },
+    ],
+    script: [
+      { type: 'text/javascript', src: 'https://platform-api.sharethis.com/js/sharethis.js#property=5f74731cd6bec30019bb9fef&product=sop', async: 'async' }
     ]
   },
 
@@ -25,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/disqus',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -34,12 +38,29 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    ['@nuxtjs/google-analytics', {
+        id: 'UA-168857087-1'
+      }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics',
+    ['nuxt-lazy-load', {
+      images: true,
+      videos: true
+    }]
   ],
+
+  sitemap: {
+      hostname: 'https://camdev.blog/',
+      routes: [
+        '/blog/',
+        '/about/'
+      ]
+    },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
