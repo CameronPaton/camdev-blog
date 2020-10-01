@@ -2,17 +2,20 @@
   "name": "camdev_blog",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/CameronPaton/camdev-blog",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "nuxt": "^2.14.5",
     "nuxt-lazy-load": "^1.2.4",
     "prism-themes": "^1.4.0",
