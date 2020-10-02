@@ -2,12 +2,13 @@
   "name": "camdev_blog",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/CameronPaton/camdev-blog/",
+  "homepage": "https://github.com/cameronpaton/camdev-blog/",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate:gh_pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+    "generate:gh_pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
