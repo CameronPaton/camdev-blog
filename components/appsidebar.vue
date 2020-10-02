@@ -3,7 +3,7 @@
         <!-- Author -->
         <div>
             <div>
-                <img class="authorImage mt-10 mx-auto md:w-40 lg:w-56" src="~/assets/images/profile_pic_circle.png" alt="profile picture of camdev">
+                <img class="authorImage mt-10 mx-auto md:w-40 lg:w-56" src="@/assets/images/profile_pic_circle.png" alt="profile picture of camdev">
             </div>
 
             <div class="bg-red-800 text-white rounded-lg -mt-8 w-11/12 m-auto flex flex-col items-center justify-center">
