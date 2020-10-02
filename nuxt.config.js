@@ -1,16 +1,8 @@
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/camdev-blog/'}} : { }
-
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  router: {
-    base: '/camdev-blog/'
-  },
 
-  ...routerBase,
-
-  mode: 'universal',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
