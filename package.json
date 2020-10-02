@@ -2,7 +2,7 @@
   "name": "camdev_blog",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/cameronpaton/camdev-blog",
+  "homepage": "https://camdev.blog",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
