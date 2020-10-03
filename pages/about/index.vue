@@ -3,11 +3,11 @@
         <Appheader />
     <main class="mt-56 lg:mt-24 grid grid-cols-4 grid-rows-7 h-auto">
         <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative flex items-start justify-start">
-            <img src="../../assets/images/23.png" class="z-10 absolute lg:h-32">
+            <img src="../../assets/images/23.png" class="z-10 absolute lg:h-32" alt="Cameron Paton">
         </div>
 
         <div id="row2" class="row-span-1 row-start-2 row-end-3 col-start-1 col-end-5 col-span-4 lg:grid lg:grid-cols-2 flex flex-col">
-            <div class="col-span-1 col-start-1 col-end-2"><img class="w-full h-full" src="../../assets/images/berlin.jpg"></div>
+            <div class="col-span-1 col-start-1 col-end-2"><img class="w-full h-full" src="../../assets/images/berlin.jpg" alt="Cameron Paton Berlin"></div>
             <div class="col-span-1 col-start-2 col-end-3 flex items-center"><div class="bg-white md:w-10/12 xl:w-9/12 aboutMe mb-8 mx-3 -mt-5 md:mx-auto md:my-8 md:-mt-10 lg:-ml-10 lg:mt-10 lg:mb-3 shadow-lg">
                 <div class="p-5 text-sm lg:text-base m-5">
                     <span class="greeting lg:text-3xl text-xl">Hi, I'm Cameron,</span>
@@ -81,12 +81,12 @@
                 Follow me on social media:
             </div>
                 <div class="smediaIcons grid grid-cols-3 gap-8 grid-rows-2 p-5 m-8 md:flex md:flex-row md:items-center md:justify-between">
-                    <a href="https://www.pinterest.co.uk/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/pinterest.png" alt="pinterest"></a>
-                    <a href="https://github.com/CameronPaton" target="_blank"><img class="h-12 w-12" src="@/assets/images/github.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/linkedIn.png" alt="linkedIn"></a>
-                    <a href="https://www.instagram.com/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/instagram.png" alt="instagram"></a>
-                    <a href="https://www.youtube.com/channel/UCGgCELpqeHXqdlN2jYO_DrA" target="_blank"><img class="h-12 w-12" src="@/assets/images/youtube.png" alt="youtube"></a>
-                    <a href="https://twitter.com/cameronpaton86" target="_blank"><img class="h-12 w-12" src="@/assets/images/twitter.png" alt='twitter'></a>
+                    <a href="https://www.pinterest.co.uk/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/pinterest.png" alt="pinterest Cameron Paton Camdev"></a>
+                    <a href="https://github.com/CameronPaton" target="_blank"><img class="h-12 w-12" src="@/assets/images/github.png" alt="github Cameron Paton Camdev"></a>
+                    <a href="https://www.linkedin.com/in/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/linkedIn.png" alt="linkedIn Cameron Paton Camdev"></a>
+                    <a href="https://www.instagram.com/cameronpaton86/" target="_blank"><img class="h-12 w-12" src="@/assets/images/instagram.png" alt="instagram Cameron Paton Camdev"></a>
+                    <a href="https://www.youtube.com/channel/UCGgCELpqeHXqdlN2jYO_DrA" target="_blank"><img class="h-12 w-12" src="@/assets/images/youtube.png" alt="youtube Cameron Paton Camdev"></a>
+                    <a href="https://twitter.com/cameronpaton86" target="_blank"><img class="h-12 w-12" src="@/assets/images/twitter.png" alt='twitter Cameron Paton Camdev'></a>
                 </div>
         </div>
 

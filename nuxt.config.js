@@ -56,8 +56,13 @@ export default {
     ['nuxt-lazy-load', {
       images: true,
       videos: true
-    }]
+    }],
+    '@aceforth/nuxt-optimized-images'
   ],
+
+  optimizedImages: {
+    optimizeImages: true
+  },
 
   sitemap: {
       hostname: 'https://camdev.blog/',

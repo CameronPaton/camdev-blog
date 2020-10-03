@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
     <Appheader />
     <div class="mt-56 lg:mt-24 h-auto w-screen">
         <header>
@@ -8,7 +8,7 @@
             </div>
         </header>
 
-        <main class="">
+        <main>
             <div class="relative bg-white">
                 <button @click="toggle" class="border border-black text-black p-3 uppercase focus:outline-none hover:bg-gray-300 flex flex-row items-center justify-center ml-20">Filter <svg class="w-6 h-6 p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
                     <ul v-if="active" class="bg-gray-400 w-48 absolute z-10">
