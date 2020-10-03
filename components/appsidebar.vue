@@ -19,6 +19,7 @@
             <div>
                 <h3 class="text-lg text-center my-3">Blog Categories: </h3>
             </div>
+        </div>
 
         <!-- Follow Me -->
         <div>
