@@ -15,7 +15,7 @@
                         
                         <li v-for="tag of tags" :key="tag.slug" class="bg-white border-b border-gray-500 text-black p-5 block hover:bg-gray-400 text-center uppercase">
                         <NuxtLink :to="`/blog/tag/${tag.slug}`">
-                        <span class="">
+                        <span>
                         {{ tag.name }}
                         </span>
                         </NuxtLink>
@@ -65,7 +65,10 @@ export default {
 						name: 'keywords', 
 						content: 'blog, technology, development, design'
 					}
-                ]
+                ],
+            link: [
+                { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  }
+            ]
             }
         },
         data() {

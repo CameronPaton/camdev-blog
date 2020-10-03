@@ -116,6 +116,9 @@ import { Disqus } from 'vue-disqus';
 						content: this.article.keywords
 					}
                 ],
+            link: [
+                { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  }
+            ],
             script: [
                 { type: 'text/javascript', src:'https://platform-api.sharethis.com/js/sharethis.js#property=5f74731cd6bec30019bb9fef&product=sop', async: 'async' }
             ]
@@ -133,7 +136,7 @@ import { Disqus } from 'vue-disqus';
             return { 
                 article,
                 prev,
-                next 
+                next,
             }
         },
         components: {

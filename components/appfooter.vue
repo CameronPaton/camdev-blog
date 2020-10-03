@@ -4,11 +4,14 @@
         <div class="flex justify-center border-t-2 border-grey-400"> 
             <img class="h-64" src="~/assets/images/22.png" type="image" alt="Branding Camdev Digital Development Logo">
         </div>
-        <!--Subscribe
-        <div class="w-full p-3 flex justify-center bg-teal-600">
-             <script async data-uid="180f068dd1" src="https://artisanal-writer-5848.ck.page/180f068dd1/index.js"></script>
+        <!--Subscribe-->
+        <div class="appsubscribe flex items-center justify-center bg-teal-600">
+            <div class="flex flex-col items-center bg-white rounded-lg w-9/12 md:w-1/3">
+                <div class="text-black text-xl p-4"><p>Subscribe to the newsletter to receive monthly updates on new articles, videos or free content:</p></div>
+                <appsubscribe class="w-48 md:w-56 text-center p-3 m-4 h-16 bg-red-800 text-white text-xl md:text-2xl hover:bg-red-500 transition ease-in-out duration-500"> </appsubscribe>
+            </div>
         </div>
-        -->
+        
         <!--Author-->
         <div id="authorFooter" class="bg-black flex flex-col items-center justify-center">
             <div class="flex items-center justify-center">
@@ -47,6 +50,8 @@
 </template>
 
 <script>
+
+
     export default {
         name: 'AppFooter',
         data () {
@@ -77,6 +82,10 @@
 <style scoped>
 #authorFooter {
     height: 600px;
+}
+
+.appsubscribe {
+    height: 400px;
 }
 
 #footerAbout {

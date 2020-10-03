@@ -10,13 +10,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Camdev Digital Development, Camdev Blog, Cameron Paton, Web Development, Web Dev, Website Development, Web Design, Website Design, Tech, Technology, health, nutrition, fitness, lifestyle' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"  },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"  },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"  }
     ],
     script: [
       { type: 'text/javascript', src: 'https://platform-api.sharethis.com/js/sharethis.js#property=5f74731cd6bec30019bb9fef&product=sop', async: 'async' }

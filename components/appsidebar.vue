@@ -14,13 +14,14 @@
             </div>
         </div>
 
-        <!-- Categories -->
+        <!-- Categories 
         <div class="my-5 mx-5 border border-gray-400 p-3">
             <div>
                 <h3 class="text-lg text-center my-3">Blog Categories: </h3>
             </div>
+           <appcategories />
         </div>
-
+        -->
         <!-- Follow Me -->
         <div>
             <app-socialmedia></app-socialmedia>
@@ -33,9 +34,12 @@
         -->
 
         <!-- Sign Up -->
-        <div>
-            <app-subscribe></app-subscribe>
+        
+        <div class="flex flex-col items-center justify-center bg-white w-11/12 border border-gray-400">
+            <div class="p-5 text-lg text-center">Subscribe to the newsletter to receive monthly updates on new articles, videos or free content</div>
+            <app-subscribe class="border border-red-800 p-3 w-32 lg:w-48 hover:bg-red-800 hover:text-white transition ease-in-out duration-500 text-center text-xs lg:text-base m-3"></app-subscribe>
         </div>
+
     </div>
 </template>
 

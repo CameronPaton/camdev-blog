@@ -1,18 +1,11 @@
 <template>
-    <div id="footerSubscribe" class="w-full p-3 flex justify-center">
         
-      
-    </div>
+      <button><a class="outline-none" href="https://artisanal-writer-5848.ck.page/d740f67330" target="_blank">Join Newsletter</a></button>
 </template>
 
 <script>
 
     export default {
-        name: 'appSubscribe'
     }
 
 </script>
-
-<style lang="scss" scoped>
-
-</style>

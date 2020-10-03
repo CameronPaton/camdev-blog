@@ -112,7 +112,10 @@
 						name: 'keywords', 
 						content: 'about me, about, who am I, Cameron, Paton, Cameron Paton, cameron paton, cameron, paton, camdev, Camdev, blog, website developer, website designer, digital developer, online content creator'
 					}
-                ]
+                ],
+                link: [
+                { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  }
+            ]
             }
         },
     }
