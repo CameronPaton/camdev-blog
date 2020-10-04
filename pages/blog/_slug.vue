@@ -19,7 +19,7 @@
         <div class="w-full flex justify-between items-center bg-black p-5">
                 <nuxt-link to="/blog"><button class="md:ml-10 bg-black border border-white hover:bg-white hover:text-gray-700 text-white p-2 md:p-3 md:w-40 transition ease-in-out duration-500 focus:outline-none md:flex md:flex-row md:items-center" > <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg><span class="hidden md:block"> All Articles</span> </button></nuxt-link>
                 <div>
-                    <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold mr-3"> {{ article.tags }} </span>
+                    <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold mx-1 md:mx-3"> {{ article.tags }} </span>
                     <span v-if="article.featured === true " class="border border-gold py-1 px-3 rounded-full bg-gold font-bold text-black"> Featured Article </span>
                 </div>
         </div>
