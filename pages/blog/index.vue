@@ -1,7 +1,7 @@
 <template>
     <div>
     <Appheader />
-    <div class="mt-56 lg:mt-24 h-auto w-screen bg-gray-300">
+    <div class="mt-56 lg:mt-24 h-auto w-screen">
         <header>
             <div id="row1" class="bg-white w-full flex items-center justify-center">
                 <h2 class="blogHeader text-bold text-center text-3xl md:text-5xl lg:text-6xl text-red-800 mx-5">Welcome to my Blog</h2>
