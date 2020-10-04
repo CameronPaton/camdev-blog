@@ -1,7 +1,7 @@
 <template>
     <div>
     <Appheader />
-    <div class="mt-56 lg:mt-24 h-auto w-screen">
+    <div class="mt-56 lg:mt-24 h-auto w-screen bg-gray-300">
         <header>
             <div id="row1" class="bg-white w-full flex items-center justify-center">
                 <h2 class="blogHeader text-bold text-center text-3xl md:text-5xl lg:text-6xl text-red-800 mx-5">Welcome to my Blog</h2>
@@ -27,7 +27,7 @@
 
             <div id="articles" class="my-8 h-auto">
             <ul class="mx-5">
-                <li v-for="article of articles" :key="article.slug" class="my-5">
+                <li v-for="article of articles" :key="article.slug" class="my-8 hover:shadow-lg">
                     <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="md:grid md:grid-cols-4 md:gap-4">
                         <img :src="article.img" class="md:cols-span-1 rounded-lg w-full h-56 object-cover" />
                     <div class="md:flex md:flex-col md:justify-between md:col-span-3">
