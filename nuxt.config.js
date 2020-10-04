@@ -14,7 +14,8 @@ export default {
     ],
     link: [
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"  },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"  }
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"  },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ],
     script: [
       { type: 'text/javascript', src: 'https://platform-api.sharethis.com/js/sharethis.js#property=5f74731cd6bec30019bb9fef&product=sop', async: 'async' }
