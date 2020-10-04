@@ -25,18 +25,20 @@
             </div>
             
 
-            <div class="my-8">
-            <ul class="mx-5 text-black grid gap-5 grid-cols-1 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 grid-flow-row">
-                <li v-for="article of articles" :key="article.slug" class="shadow-md hover:shadow-lg">
-                    <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                        <img :src="article.img" class="rounded-lg w-full h-56 object-cover" />
-                    <div class="m-3">
-                        <h3 class="font-bold text-2xl text-center p-3">{{ article.title }}</h3>
-                        <p class="p-3">{{ article.description }}</p>
-                    </div>
-                    <div class="flex flex-row items-center justify-between m-3">
-                        <span class="text-gray-500 p-3 italic"> {{ formatDate(article.createdAt) }} </span>
-                        <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold text-white"> {{ article.tags }} </span>
+            <div id="articles" class="my-8 h-auto">
+            <ul class="mx-5">
+                <li v-for="article of articles" :key="article.slug" class="my-5">
+                    <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="md:grid md:grid-cols-4 md:gap-4">
+                        <img :src="article.img" class="md:cols-span-1 rounded-lg w-full h-56 object-cover" />
+                    <div class="md:flex md:flex-col md:justify-between md:col-span-3">
+                        <div class="m-3">
+                            <h3 class="font-bold text-2xl md:text-left p-3">{{ article.title }}</h3>
+                            <p class="p-3">{{ article.description }}</p>
+                        </div>
+                        <div class="flex flex-row items-center justify-between m-3">
+                            <span class="text-gray-500 p-3 italic"> {{ formatDate(article.createdAt) }} </span>
+                            <span class="border border-blue-500 py-1 px-3 rounded-full bg-blue-500 font-bold text-white"> {{ article.tags }} </span>
+                        </div>
                     </div>
                     </NuxtLink>
                 </li>
@@ -107,5 +109,12 @@ export default {
     }
     .blogHeader {
         font-family: 'Rock Salt', cursive;
+    }
+
+    #articles ul li{
+        background: white;
+        border-radius: 1em;
+        padding: .8em;
+        box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.04);
     }
 </style>
