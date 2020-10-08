@@ -49,12 +49,19 @@
                         </div>
                         <div class="col2">
                             <!--Pinterest Image with pin it functionality -->
+                            <img class="mx-auto lg:mx-3 my-5 lg:my-0" :src="article.pinterestImg" :alt="article.pinAlt">
                         </div>
                     </div>
                 <!--Embedded Youtube Video -->
+
+                <!-- blank line -->
+                    <figure v-show="article.youtube === true" class="video_container my-5 mx-5">
+                        <iframe :src="article.youtubeSrc" frameborder="0" allowfullscreen="true"> </iframe>
+                    </figure>
+                    <!-- blank line -->
+
                 <!-- Button to subscribe -->
-
-
+                    <app-youtube />
                 <!-- POST CONTENT - END OF INTRO -->
                 <div class="text-black text-lg mx-20 mt-8 italic"> Article published: {{ formatDate(article.createdAt) }} </div>
                 <nuxt-content class="coreContent mx-5 pl-2 md:px-8" :document="article" />

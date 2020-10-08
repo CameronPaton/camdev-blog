@@ -9,7 +9,7 @@
                 <a href="https://github.com/CameronPaton" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/github.png" alt="github Camdev Cameron Paton"></a>
                 <a href="https://www.linkedin.com/in/cameronpaton86/" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/linkedIn.png" alt="linkedIn Camdev Cameron Paton"></a>
                 <a href="https://www.instagram.com/cameronpaton86/" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/instagram.png" alt="instagram Camdev Cameron Paton"></a>
-                <a href="https://www.youtube.com/channel/UCGgCELpqeHXqdlN2jYO_DrA" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/youtube.png" alt="youtube Camdev Cameron Paton"></a>
+                <a href="https://youtube.com/channel/UCVX2Z0tBQFjmqA9mxVPmm8w" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/youtube.png" alt="youtube Camdev Cameron Paton"></a>
                 <a href="https://twitter.com/cameronpaton86" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="@/assets/images/twitter.png" alt='twitter Camdev Cameron Paton'></a>
             </div>
         </div>

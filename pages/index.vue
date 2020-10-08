@@ -8,10 +8,10 @@
         <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative">
           <div id="overlay" class="h-screen bg-black flex flex-col items-center">
             <div id="heroBranding" class="h-screen flex flex-col items-center justify-center md:justify-evenly">
-              <img class="w-64 md:w-6/12" id="showcaseBrand" src="@/assets/images/narrow.png" alt="camdev digital development">
-              <div id="callToAction" class="text-white bg-red-800 text-center p-5 rounded-lg tracking-wider w-48 mt-5 md:mt-0 md:w-4/12">
+              <img class="w-64 md:w-6/12" src="@/assets/images/narrow.png" alt="camdev digital development">
+              <div class="text-white bg-primary text-center p-5 rounded-lg tracking-wider w-48 mt-5 md:mt-0 md:w-4/12">
               <p class="text-white text-lg font-extrabold text-center">Read the latest articles to enhance your digital life</p>
-              <nuxt-link to="/blog"><button class="p-4 border bg-black text-white rounded-lg uppercase font-extrabold hover:bg-red-800 hover:border-black hover:text-black transition ease-in-out duration-500 mt-8"> See Articles </button></nuxt-link>
+              <nuxt-link to="/blog"><button class="p-4 border bg-black text-white rounded-lg uppercase font-extrabold hover:bg-primary hover:border-black hover:text-black transition ease-in-out duration-500 mt-8"> See Articles </button></nuxt-link>
               <img src="@/assets/images/23.png" alt="Cameron Paton">
               </div>
             </div>
@@ -35,7 +35,7 @@
 
         <!--Branding and motto - ties in with parallax image somehow? -->
 
-        <div id="row3" class="bg-red-800 row-span-1 row-start-3 row-end-4 col-start-1 col-end-5 col-span-4 flex items-center justify-center">
+        <div id="row3" class="bg-primary row-span-1 row-start-3 row-end-4 col-start-1 col-end-5 col-span-4 flex items-center justify-center">
             <div id="row3-col-1" class="border-l-4 border-white pl-5 font-extrabold text-yellow-400 w-64"><h1>Make Your Digital Life More Efficient</h1></div>
         </div>
 
@@ -47,12 +47,14 @@
 
         <!--paste the three additional Sections here when ready to expand -->
         <!--Free Content -->
-        <!--Youtube -->
-        <!--Instagram -->
+        <div id="row6" class="bg-secondary h-64 row-start-5 row-end-6 col-start-1 col-end-5 col-span-4 flex justify-center border-b border-gray-300">
+            <app-youtube />
+        </div>
 
+        <!--Instagram -->
         <!--Featured Post -->
 
-        <div id="row8" class="row-start-8 row-end-9 col-start-1 col-end-5 col-span-4">
+        <div id="row8" class="row-start-6 row-end-7 col-start-1 col-end-5 col-span-4">
             <h2 class="text-center font-extrabold font-lg mt-8"> Featured Post </h2>
             <div class="mt-8 mx-5">
               <ul id="row8Featured">
@@ -79,7 +81,7 @@
       
         <!--Recent Articles -->
 
-        <div id="row9" class="bg-blue-200 row-start-9 row-end-10 col-start-1 col-end-5 col-span-4 h-auto mt-8">
+        <div id="row9" class="bg-blue-200 row-start-7 row-end-8 col-start-1 col-end-5 col-span-4 h-auto mt-8">
             <h2 class="text-center mt-8">Recent Articles</h2>
           <div class="py-8">
             <ul class="mx-5">
@@ -126,6 +128,9 @@ export default {
 						name: 'keywords', 
 						content: 'about me, who am I'
 					}
+                ],
+                link: [
+                  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  }
                 ]
             }
         },
@@ -304,9 +309,7 @@ additional sections to be added later:
             <h3> Free Content Ebooks or templates or guides </h3>
         </div>
 
-        <div id="row6" class="bg-purple-500 h-64 row-start-6 row-end-7 col-start-1 col-end-5 col-span-4">
-            <h3> Youtube Videos </h3>
-        </div>
+        
 
         <div id="row7" class="bg-gray-500 h-64 row-start-7 row-end-8 col-start-1 col-end-5 col-span-4">
             <h3> Instagram </h3>

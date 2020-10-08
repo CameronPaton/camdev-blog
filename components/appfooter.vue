@@ -8,7 +8,7 @@
         <div class="appsubscribe flex items-center justify-center bg-teal-600">
             <div class="flex flex-col items-center bg-white rounded-lg w-9/12 md:w-1/3">
                 <div class="text-black text-xl p-4"><p>Subscribe to the newsletter to receive monthly updates on new articles, videos or free content:</p></div>
-                <appsubscribe class="w-48 md:w-56 text-center p-3 m-4 h-16 bg-red-800 text-white text-xl md:text-2xl hover:bg-red-500 transition ease-in-out duration-500"> </appsubscribe>
+                <appsubscribe class="w-48 md:w-56 text-center p-3 m-4 h-16 bg-primary text-white text-xl md:text-2xl hover:bg-red-500 transition ease-in-out duration-500"> </appsubscribe>
             </div>
         </div>
         
@@ -43,7 +43,7 @@
             <a href="https://github.com/CameronPaton" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/github.png" type="image" alt="github Camdev Cameron Paton"></a>
             <a href="https://www.linkedin.com/in/cameronpaton86/" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/linkedIn.png" type="image" alt="linkedIn Camdev Cameron Paton"></a>
             <a href="https://www.instagram.com/cameronpaton86/" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/instagram.png" type="image" alt="instagram Camdev Cameron Paton"></a>
-            <a href="https://www.youtube.com/channel/UCGgCELpqeHXqdlN2jYO_DrA" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/youtube.png" type="image" alt="youtube Camdev Cameron Paton"></a>
+            <a href="https://youtube.com/channel/UCVX2Z0tBQFjmqA9mxVPmm8w" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/youtube.png" type="image" alt="youtube Camdev Cameron Paton"></a>
             <a href="https://twitter.com/cameronpaton86" target="_blank"><img class="h-8 w-8 md:h-12 md:w-12" src="~/assets/images/twitter.png" type="image" alt='twitter Camdev Cameron Paton'></a>
         </div>
     </footer>

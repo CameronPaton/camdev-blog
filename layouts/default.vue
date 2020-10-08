@@ -55,12 +55,16 @@ body {
   list-style: outside;
   padding:0.5em;
   font-size: 1em;
-  letter-spacing: 0.1em;
 }
 
 .coreContent ul {
   margin-left: 2.0em;
   padding: 0.5em;
+}
+
+.pinterest {
+  height: 300px;
+  margin: 0 auto;
 }
 
 .coreContent ol li {
@@ -77,12 +81,22 @@ body {
   margin: 1em 0;
 }
 
+.video_container iframe{
+  margin: 0 auto;
+  width: 80%;
+  height: 300px;
+}
+
 .coreContent blockquote {
   margin: 1em auto;
   padding: 0.5em;
   border-left: solid 4px coral;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.coreContent img {
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px){
