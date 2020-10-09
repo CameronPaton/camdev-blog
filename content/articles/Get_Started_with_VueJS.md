@@ -113,13 +113,13 @@ Hold down the command key for mac (*or shift key for Windows*) and click on the 
 
 The page you will see is below:
 
-![VueJS LocalHost screen](https://cdn-media-1.freecodecamp.org/images/bRNk-GcCDW-4lhpwg3wEjbE9NgfImcTEFMFj)
+<img src="https://cdn-media-1.freecodecamp.org/images/bRNk-GcCDW-4lhpwg3wEjbE9NgfImcTEFMFj" alt="VueJS LocalHost screen" class="noPin">
 
 You are now ready to start building your application.
 
 Now that you have the CLI installed and are able to set up the initial application, you should open your text editor of choice and open the folder you created. I would recommend using Visual Studio Code. You will now be able to see the folder structure which is shown below:
 
-![VueJS initial folder structure](https://i.ibb.co/MpN3JKB/Screenshot-2020-06-19-at-10-27-00.png)
+<img src="https://i.ibb.co/MpN3JKB/Screenshot-2020-06-19-at-10-27-00.png" alt="VueJS initial folder structure" class="noPin">
 
 **public > index.html**
 

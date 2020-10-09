@@ -8,11 +8,11 @@
         <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative">
           <div id="overlay" class="h-screen bg-black flex flex-col items-center">
             <div id="heroBranding" class="h-screen flex flex-col items-center justify-center md:justify-evenly">
-              <img class="w-64 md:w-6/12" src="@/assets/images/narrow.png" alt="camdev digital development">
+              <img class="w-64 md:w-6/12 noPin" src="@/assets/images/narrow.png" alt="camdev digital development">
               <div class="text-white bg-primary text-center p-5 rounded-lg tracking-wider w-48 mt-5 md:mt-0 md:w-4/12">
               <p class="text-white text-lg font-extrabold text-center">Read the latest articles to enhance your digital life</p>
               <nuxt-link to="/blog"><button class="p-4 border bg-black text-white rounded-lg uppercase font-extrabold hover:bg-primary hover:border-black hover:text-black transition ease-in-out duration-500 mt-8"> See Articles </button></nuxt-link>
-              <img src="@/assets/images/23.png" alt="Cameron Paton">
+              <img src="@/assets/images/23.png" alt="Cameron Paton" class="noPin">
               </div>
             </div>
           </div>
