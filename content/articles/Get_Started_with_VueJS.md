@@ -19,6 +19,7 @@ youtubeSrc:
 You should be aware of the following concepts before reading this:
 
 - Basic command line knowledge
+- HTML
 - Basic JavaScript knowledge
 - Install NodeJS
 
@@ -45,9 +46,12 @@ Integrating Vue into an existing project, using it to practice implementing Vue 
 Create an HTML file and add the following script to the header:
 
 ```markup[integrate.html]
-<head>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"><script>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+</html>
 ```
 
 In the main body of the html file we can now add a div with the id of app to the location we want to manipulate in the document. 
@@ -58,7 +62,7 @@ In the main body of the html file we can now add a div with the id of app to the
 </body>
 ```
 
-At the bottom of our document before the closing body tag, we can add script tags where we will link up with the app id and create a Vue instance:
+At the bottom of our document before the closing body tag, we can add script tags where we will link up with the app id using the "el" keyword and create a Vue instance. We add the data object which contains a property value of name and a value:
 
 ```markup[integrate.html]
 <script>
@@ -71,7 +75,7 @@ At the bottom of our document before the closing body tag, we can add script tag
 </script>
 ```
 
-We can now use string interpolation in our div with an id of "app" to output whatever data is stored in our Vue instance. This is shown below:
+We can now use string interpolation in our div with an id of "app" to output whatever data value is stored in our Vue instance. This is shown below:
 
 ```markup[integrate.html]
 <body>
@@ -79,7 +83,30 @@ We can now use string interpolation in our div with an id of "app" to output wha
 </body>
 ```
 
-Open your HTML file and you should now see your name output in the browser. VueJS uses the MVVM model which is Model-View-View-Model. The model is whatever is stored as a value under the data property. The view is the output the user will see which in this example will be under the div with the id of app which outputs the name value, and the view-model will be whatever manipulation to the data occurs between the data and the view. 
+Open your HTML file in the browser and you should now see your name data value. The full code is below:
+
+```markup[integrate.html]
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app"> {{ name }} </div>
+
+        <script>
+            const vApp = new Vue({
+                el: '#app',
+                data: {
+                    name: "Camdev"
+                }
+            });
+        </script>
+    </body>
+</html>
+```
+
+VueJS uses the MVVM model which is Model-View-View-Model. The model is whatever is stored as a value under the data property. The view is the output the user will see which in this example will be under the div with the id of app which outputs the name value, and the view-model will be whatever manipulation to the data occurs between the data and the view. 
 
 We can use other keywords in our Vue instance to manipulate the data before it is output in the view. Other keywords we can use are methods, computed and watch. 
 
