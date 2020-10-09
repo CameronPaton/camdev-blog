@@ -8,11 +8,11 @@
         <div id="row1" class="h-screen col-start-1 col-end-5 col-span-4 row-span-1 row-start-1 row-end-2 relative">
           <div id="overlay" class="h-screen bg-black flex flex-col items-center">
             <div id="heroBranding" class="h-screen flex flex-col items-center justify-center md:justify-evenly">
-              <img class="w-64 md:w-6/12 noPin" src="@/assets/images/narrow.png" alt="camdev digital development">
+              <img class="w-64 md:w-6/12 " src="@/assets/images/narrow.png" alt="camdev digital development">
               <div class="text-white bg-primary text-center p-5 rounded-lg tracking-wider w-48 mt-5 md:mt-0 md:w-4/12">
               <p class="text-white text-lg font-extrabold text-center">Read the latest articles to enhance your digital life</p>
               <nuxt-link to="/blog"><button class="p-4 border bg-black text-white rounded-lg uppercase font-extrabold hover:bg-primary hover:border-black hover:text-black transition ease-in-out duration-500 mt-8"> See Articles </button></nuxt-link>
-              <img src="@/assets/images/23.png" alt="Cameron Paton" class="noPin">
+              <img src="@/assets/images/23.png" alt="Cameron Paton" class="">
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@
                 Thankyou for visiting my blog site! The username I use for blogging and vlogging is Camdev but my name is Cameron and I created this site as a hub for online content that I intend to develop. Digital Development is the general theme of the content, which will cover a broad spectrum of categories in the digital world such as: web development and design; useful software; devices; digital media and digital marketing. My aim is to create a central resource hub for information containing both articles and videos. 
               </p>
               <p class="mt-8 text-sm md:text-md lg:text-lg px-8 py-5 md:px-20 text-gray-700">
-                In the future I plan to create regular blog articles, online courses, free useful content, ebooks, videos and freelancing services which will be available through this website. I also have a Youtube channel which I will use to supplement any tutorials I make so please subscribe to that. Enter your email address below to subscribe to this site and you will receive updates on new content, services or latest news. 
+                In the future I plan to create regular blog articles, online courses, free useful content, ebooks, videos and freelancing services which will be available through this website. I also have a Youtube channel which I will use to supplement any tutorials I make so please subscribe to that. Click the button below to enter your email address to subscribe to this site and you will receive updates on new content, services or latest news. 
               </p>
             </div>
         </section>

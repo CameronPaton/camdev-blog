@@ -3,7 +3,7 @@
 
         <div id="brandingLogo" class="flex mt-3 lg:order-2 lg:mb-3 lg:mr-12">
             <nuxt-link to="/">
-                <img class="w-20 h-20 noPin" src="@/assets/images/2.png" alt="Camdev Webcam Red Logo">
+                <img class="w-20 h-20 " src="@/assets/images/2.png" alt="Camdev Webcam Red Logo">
             </nuxt-link>
         </div>
 
